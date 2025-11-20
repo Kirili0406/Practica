@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — PS4 Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="about.html">О нас</a>
+    <a href="contact.html" class="active">Контакты</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <section class="contact-hero">
+    <h1>Свяжитесь с нами</h1>
+    <p>Оставьте сообщение, и мы ответим в течение 24 часов.</p>
+  </section>
+
+  <div class="contact-info">
+    <div class="contact-item">
+      <h3>📧 Email</h3>
+      <p>ps4store@gmail.com</p>
+    </div>
+    <div class="contact-item">
+      <h3>💬 Telegram</h3>
+      <p>@ps4shop</p>
+    </div>
+  </div>
+
+  <h2 class="block-title">Отправить сообщение</h2>
+  <form id="contactForm" class="contact-form">
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <input type="email" name="email" placeholder="Ваш Email" required>
+    <textarea name="message" rows="5" placeholder="Ваше сообщение" required></textarea>
+    <button type="submit">Отправить</button>
+  </form>
+
+</div>
+
+<footer>© 2025 PS4 Store</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  alert("Спасибо! Ваше сообщение отправлено.");
+  this.reset();
+});
+</script>
+
+</body>
+</html>

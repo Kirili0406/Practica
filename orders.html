@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заказы — PS4 Store</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .login-box {
+      max-width: 350px;
+      margin: 80px auto;
+      padding: 25px;
+      background: #1e1e1e;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 132, 255, 0.4);
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      margin-top: 10px;
+      border-radius: 8px;
+      outline: none;
+      background: #252525;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .login-box button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+      font-size: 17px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .login-box button:hover {
+      background: #0065d1;
+    }
+
+    #orders {
+      display: none;
+      color: white;
+      max-width: 800px;
+      margin: 30px auto;
+    }
+
+    .order-item {
+      background: #1e1e1e;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border-left: 4px solid #007bff;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="about.html">О нас</a>
+    <a href="contact.html">Контакты</a>
+    <a href="orders.html">Заказы</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- Блок авторизации -->
+  <div class="login-box" id="loginBox">
+    <h2>Вход для администратора</h2>
+    <p>Введите пароль</p>
+    <input type="password" id="adminPass" placeholder="Пароль">
+    <button onclick="checkPass()">Войти</button>
+    <p id="error" style="color:red;margin-top:10px;"></p>
+  </div>
+
+<script>
+  function checkPass() {
+    let pass = document.getElementById("adminPass").value;
+    let error = document.getElementById("error");
+
+    if (pass === "123456") {
+      document.getElementById("loginBox").style.display = "none";
+      document.getElementById("orders").style.display = "block";
+    } else {
+      error.innerText = "Неверный пароль!";
+    }
+  }
+</script>
+
+<footer>© 2025 PS4 Store</footer>
+
+</body>
+</html>

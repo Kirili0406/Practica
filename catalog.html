@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PS4 Store — Каталог</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="catalog.html" class="active">Каталог</a>
+    <a href="about.html">О нас</a>
+    <a href="contact.html">Контакты</a>
+  </nav>
+</header>
+
+<section class="container">
+
+  <h1>Каталог игр</h1>
+
+  <div class="filters">
+    <input type="text" id="searchInput" placeholder="Поиск игр..." />
+    <select id="genreFilter">
+      <option value="">Все жанры</option>
+      <option value="Action">Action</option>
+      <option value="Adventure">Adventure</option>
+      <option value="RPG">RPG</option>
+    </select>
+  </div>
+
+
+  <div class="game-grid" id="gameList"></div>
+
+</section>
+
+<footer>
+  © 2025 PS4 Store
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

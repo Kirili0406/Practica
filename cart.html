@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Корзина — PS4 Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">О нас</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+    <div style="position:absolute; right:16px; top:12px;">
+      <a href="cart.html" class="cart-link">Корзина (<span id="cartCount">0</span>)</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Ваша корзина</h1>
+    <div id="cartEmpty" style="display:none; text-align:center; margin-top:30px;">
+      <p>Ваша корзина пуста.</p>
+      <a href="catalog.html" class="btn" style="margin-top:12px">Перейти в каталог</a>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div id="cartFooter" style="display:none; margin-top:30px; text-align:right;">
+      <div style="font-size:18px; margin-bottom:10px;">Итого: <strong id="cartTotal">0₸</strong></div>
+      <button id="clearCart" class="btn outline">Очистить корзину</button>
+      <button id="checkout" class="btn" style="margin-left:12px">Оформить заказ</button>
+    </div>
+  </main>
+
+  <footer>© 2025 PS4 Store</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
